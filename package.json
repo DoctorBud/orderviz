@@ -1,0 +1,24 @@
+{
+  "name": "orderviz",
+  "version": "0.0.4",
+  "description": "Exploring the Visualization of Order",
+  "main": "index.js",
+  "directories": {
+  },
+  "scripts": {
+    "clean": "rm -rf dist/",
+    "rmdsstore": "find . -name '.DS_Store' -print -delete",
+    "dev": "http-server -a localhost --cors -p 5005 -c-1 -S -C ./ssl/server.cert -K ./ssl/server.key site",
+    "ghpublish": "./publish.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com:DoctorBud/orderviz.git"
+  },
+  "author": "Daniel Keith <dan@quantumclay.com> (https://doctorbud.com)",
+  "bugs": {
+    "url": "https://github.com:DoctorBud/orderviz/issues"
+  },
+  "homepage": "https://github.com:DoctorBud/orderviz#readme"
+}

@@ -131,8 +131,8 @@ function pairwise(row) {
   if (!pairwiseCalculated) {
     pairwiseCalculated = new Array(n);
     for (var i = 0; i < n; ++i) {
-      pairwiseCalculated[i] = i + 2;
-      pairwiseCalculated[i + 1] = i + 1;
+      pairwiseCalculated[i] = i + 1;
+      pairwiseCalculated[i + 1] = i;
     }
   }
 
@@ -151,11 +151,33 @@ p5.draw = function() {
 
 This is a more dynamic version of the pairwise swap. In this case, we'll be doing a pairwise swap for each new element, but we will not affect an element that has already been swapped.
 
+We should expect a sequence like:
+
+```
+1  2  3  4  5  6  8  9 10 11 12 13 14 15 16 17 18
+2  1  3  4  5  6  8  9 10 11 12 13 14 15 16 17 18
+1  2  6  4  5  3  8  9 10 11 12 13 14 15 16 17 18
+1  2  3  8  5  6  4  9 10 11 12 13 14 15 16 17 18
+1  2  3  4  10  6  8  9 5 11 12 13 14 15 16 17 18
+1  2  3  4  5  6  8  9 10 11 12 13 14 15 16 17 18
+1  2  3  4  5  6  8  9 10 11 12 13 14 15 16 17 18
+1  2  3  4  5  6  8  9 10 11 12 13 14 15 16 17 18
+1  2  3  4  5  6  8  9 10 11 12 13 14 15 16 17 18
+1  2  3  4  5  6  8  9 10 11 12 13 14 15 16 17 18
+1  2  3  4  5  6  8  9 10 11 12 13 14 15 16 17 18
+1  2  3  4  5  6  8  9 10 11 12 13 14 15 16 17 18
+1  2  3  4  5  6  8  9 10 11 12 13 14 15 16 17 18
+1  2  3  4  5  6  8  9 10 11 12 13 14 15 16 17 18
+1  2  3  4  5  6  8  9 10 11 12 13 14 15 16 17 18
+1  2  3  4  5  6  8  9 10 11 12 13 14 15 16 17 18
+```
+
+
 ```p5js/playable/autoplay/center
 
-var n = 100;
-var cellWidth = 4;
-var cellHeight = 4;
+var n = 40;
+var cellWidth = 20;
+var cellHeight = 20;
 
 p5.setup = function() {
   window.draw2D.setup(p5, cellWidth, cellHeight, n);
@@ -166,9 +188,9 @@ function nwise(row) {
   if (!nwiseCalculated) {
     nwiseCalculated = new Array(n);
     for (var i = 0; i < n; ++i) {
-      if (true || !nwiseCalculated[i]) {
-        nwiseCalculated[i] = 2 * (i + 1);
-        nwiseCalculated[i + i + 1] = i + 1;
+      if (!nwiseCalculated[i]) {
+        nwiseCalculated[i] = 2 * (i + 1) - 1;
+        nwiseCalculated[2 * i] = i;
       }
     }
   }

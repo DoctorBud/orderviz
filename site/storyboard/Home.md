@@ -13,3 +13,8 @@ These are somewhat structured notes looking at the relation between an algorithm
 - [Evolution 2D](:@Evolution2D)
 - [Knottiness](:@Knottiness)
 
+
+## Order and The No Passing Conjecture
+
+- [Inspiration](:@inspiration)
+- [The Importance of Order](:@LanguageOrder)

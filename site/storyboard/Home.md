@@ -11,5 +11,6 @@ These are somewhat structured notes looking at the relation between an algorithm
 
 - [OrderingAndPermutations](:@Permutations)
 - [Evolution 2D](:@Evolution2D)
+- [Whiskers](:@Whiskers)
 - [Knottiness](:@Knottiness)
 

@@ -1,0 +1,20 @@
+.step {
+  border: 5px solid lightblue;
+  border-radius: 6px;
+  background: aliceblue;
+}
+
+#Overview.step {
+  background: indigo;
+}
+
+
+.smartdown-container .MathJax_Display {
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+
+
+.smartdown-outer-container.flatten-vertical #Overview.step.smartdown-impress-loading {
+  display: none;
+}

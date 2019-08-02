@@ -178,9 +178,9 @@ function nwise(row) {
   if (!nwiseCalculated) {
     nwiseCalculated = new Array(n);
     for (var i = 0; i < n; ++i) {
-      if (true || !nwiseCalculated[i]) {
-        nwiseCalculated[i] = 2 * (i + 1);
-        nwiseCalculated[i + i + 1] = i + 1;
+      if (typeof nwiseCalculated[i] === 'undefined') {
+        nwiseCalculated[i] = 2 * (i + 1) - 1;
+        nwiseCalculated[2 * (i + 1) - 1] = i;
       }
     }
   }
@@ -208,7 +208,7 @@ This should effect a swap of each prime with its square, and uses no memory (exc
 
 ```p5js/playable/autoplay/center
 
-var n = 10;
+var n = 20;
 var cellWidth = 15;
 var cellHeight = 400;
 

@@ -40,6 +40,7 @@ function draw2D(p5, cellWidth, cellHeight, n, getSelectedCellForRow) {
   }
 
   p5.noStroke();
+  p5.frameRate(0);
 };
 window.draw2D = {
   setup: setup2D,
@@ -54,7 +55,7 @@ The simplest ordering is none at all, where each element is emitted in its *natu
 The *trace* of this execution is fairly boring:
 
 ```
- 0: 
+ 0:
  1: 1
  2: 1 2
  3: 1 2 3
@@ -136,11 +137,11 @@ The trace from the algorithm that generates this ordering uses bounded memory; w
 
 
 ```
-0: 1 2 3 4 5 6
-1: 2 1 3 4 5 6
-2: 2 3 1 4 5 6
-3: 2 3 4 1 5 6
-4: 2 3 4 5 1 6
+0:
+1: 2 1
+2: 2 3 1
+3: 2 3 4 1
+4: 2 3 4 5 1
 ```
 
 

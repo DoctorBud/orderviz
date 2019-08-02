@@ -52,6 +52,7 @@ function drawWhisker(p5, cellWidth, cellHeight, n, getTranslatedIndex) {
   }
 
   p5.noStroke();
+  p5.frameRate(0);
 };
 window.drawWhisker = {
   setup: setupWhisker,
@@ -208,9 +209,9 @@ This should effect a swap of each prime with its square, and uses no memory (exc
 
 ```p5js/playable/autoplay/center
 
-var n = 20;
+var n = 400;
 var cellWidth = 15;
-var cellHeight = 400;
+var cellHeight = 600;
 
 p5.setup = function() {
   window.drawWhisker.setup(p5, cellWidth, cellHeight, n);

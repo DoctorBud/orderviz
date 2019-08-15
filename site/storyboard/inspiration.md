@@ -31,6 +31,7 @@ It follows that a language $L$ is decidable if and only if some enumerator enume
 We tend to think of languages as unordered sets. This is appropriate when we want to talk about languages in general.  However, this proof hints that order can be an important property for recognizable sets. Given an infinite recognizable language, we can't always generate it in whatever order we want.  In fact, we'll see that for any infinite recognizable set, most of it's orderings can't be generated.  
 
 
+# :::: haltingproblem
 
 ### The HALTING problem
 
@@ -55,7 +56,13 @@ Now that we have our description of $D$, we can ask what happens if we call $D$ 
 
 # --outlinebox
 
+### The No Passing Conjecture
+# --outlinebox nopassing
+	
+	There are 
+# --outlinebox
 
+# :::: 
 ---
 
 [Home](:@Home)
